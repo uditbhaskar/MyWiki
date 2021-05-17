@@ -1,6 +1,6 @@
 # MyWiki
 
-This app uses Wikipedia API to fetch the relevant data about the searched query. It shows search suggestions as the user types the query to be searched. It saves the visited searched pages in the history section using the Room database. It shows a list of fetched data about the searched item and lets the user visit its Wikipedia page if a user clicks on it.
+This app uses Wikipedia API to fetch the relevant data about the searched query. It shows search suggestions as the user types the query to be searched, saves the visited searched pages in the history section using the Room database, shows a list of fetched data about the searched item, and lets the user visit its Wikipedia page if a user clicks on it.
 
 This project is based on MVVM architecture and has a beautiful UI.
 
