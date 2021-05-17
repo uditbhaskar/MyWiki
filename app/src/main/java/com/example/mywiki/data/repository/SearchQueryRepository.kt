@@ -4,9 +4,12 @@ import com.example.mywiki.data.local.DatabaseService
 import com.example.mywiki.data.model.PagesData
 import com.example.mywiki.data.remote.NetworkService
 import com.example.mywiki.data.remote.response.SearchResponse
+import io.reactivex.Observable
 import io.reactivex.Single
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class SearchQueryRepository @Inject constructor(
     private val networkService: NetworkService
 ) {
@@ -30,7 +33,7 @@ class SearchQueryRepository @Inject constructor(
             }
         }
 
-    fun fetchSearchSuggestion(searchSuggestionQuery:String): Single<List<PagesData>> =
+    fun fetchSearchSuggestion(searchSuggestionQuery:String): Observable<List<PagesData>> =
         networkService.fetchSearchSuggestion(
             searchSuggestionQuery,
             "query",

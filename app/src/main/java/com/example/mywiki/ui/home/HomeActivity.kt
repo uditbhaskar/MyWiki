@@ -63,6 +63,7 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 viewModel.onSearchingSuggestion(s.toString())
+
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -127,7 +128,6 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
         viewModel.savedHistoryData.observe(this, Observer {
             it.data?.run {
                 historyAdapter.appendData(this)
-             //   historyAdapter.notifyDataSetChanged()
             }
         })
 

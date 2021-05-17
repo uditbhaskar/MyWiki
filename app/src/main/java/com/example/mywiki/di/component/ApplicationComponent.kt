@@ -6,6 +6,8 @@ import android.content.SharedPreferences
 import com.example.mywiki.MyWiki
 import com.example.mywiki.data.local.DatabaseService
 import com.example.mywiki.data.remote.NetworkService
+import com.example.mywiki.data.repository.SaveAndFetchQueryDbRepository
+import com.example.mywiki.data.repository.SearchQueryRepository
 import com.example.mywiki.di.ApplicationContext
 import com.example.mywiki.di.module.ApplicationModule
 import com.example.mywiki.utils.network.NetworkHelper
@@ -55,6 +57,8 @@ interface ApplicationComponent {
      */
 
     fun getSchedulerProvider(): SchedulerProvider
+
+    fun getSearchQueryRepo() : SearchQueryRepository
 
 
     fun getCompositeDisposable(): CompositeDisposable

@@ -10,6 +10,7 @@ import com.example.mywiki.utils.common.Resource
 import com.example.mywiki.utils.network.NetworkHelper
 import com.example.mywiki.utils.rx.SchedulerProvider
 import io.reactivex.disposables.CompositeDisposable
+import java.util.concurrent.TimeUnit
 
 class HomeViewModel(
     schedulerProvider: SchedulerProvider,
@@ -27,9 +28,6 @@ class HomeViewModel(
     override fun onCreate() {
         onFetchingHistoryData()
     }
-
-
-
 
 
     fun onFetchingHistoryData() {
@@ -71,6 +69,10 @@ class HomeViewModel(
             compositeDisposable.add(
                 searchQueryRepository.fetchSearchSuggestion(q)
                     .subscribeOn(schedulerProvider.io())
+                    .debounce (200,TimeUnit.MILLISECONDS)  //removing unnecessary network calls
+                    .filter {
+                        return@filter it.isNotEmpty()           //filtering the search with no result calls
+                    }
                     .subscribe(
                         { it ->
                             val z = arrayListOf<String>()

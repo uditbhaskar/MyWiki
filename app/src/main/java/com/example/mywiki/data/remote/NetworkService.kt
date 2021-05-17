@@ -1,6 +1,7 @@
 package com.example.mywiki.data.remote
 
 import com.example.mywiki.data.remote.response.SearchResponse
+import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.http.*
 import javax.inject.Singleton
@@ -31,7 +32,7 @@ interface NetworkService {
         @Query("format") format:String,
         @Query("generator") generator:String,
         @Query("gpslimit") gpslimit:String
-    ):Single<SearchResponse>
+    ):Observable<SearchResponse>
 
 }
 // &gpssearch=aa&
