@@ -1,0 +1,74 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_item_view1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:elevation="5dp"
+    android:visibility="visible"
+    >
+    <LinearLayout
+        android:id="@+id/main_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_item_image"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/ic_baseline_image_not_supported_24"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/anaconda"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:drawableEnd="@drawable/ic_baseline_north_west_24"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="#292828"
+                android:textSize="14sp"
+                android:text="@string/this_is_a_very_long_description_about_a_nothing_and_awful_info_of_a_searched_item"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textStyle="normal">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyWiki</string>
+
+    <string name="network_connection_error">Internet connection lost, please retry again</string>
+    <string name="network_default_error">Something wrong happened, please retry again</string>
+    <string name="network_internal_error">Our systems got an error, please retry again</string>
+    <string name="network_server_not_available">Our services are under maintenance, please retry after some time
+    </string>
+    <string name="server_connection_error">Not able to connect, please retry again</string>
+    <string name="network_login_again">Please log in again</string>
+    <string name="todo">to do\\</string>
+    <string name="history">History</string>
+    <string name="search">Search Wikipedia..</string>
+    <string name="details">Wiki Page</string>
+    <string name="mywiki">MyWiki</string>
+    <string name="this_is_a_very_long_description_about_a_nothing_and_awful_info_of_a_searched_item">This is a very long description about a nothing and awful info of a searched item</string>
+    <string name="anaconda">Anaconda</string>
+    <string name="title">Title</string>
+</resources>
