@@ -130,6 +130,14 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
 
         viewModel.savedHistoryData.observe(this, Observer {
             it.data?.run {
+
+                if(this.isNullOrEmpty()){
+                    binding.rvHistory.visibility=View.GONE
+                    binding.noHistoryLayout.visibility=View.VISIBLE
+                }else{
+                    binding.rvHistory.visibility=View.VISIBLE
+                    binding.noHistoryLayout.visibility=View.GONE
+                }
                 historyAdapter.appendData(this)
             }
         })
