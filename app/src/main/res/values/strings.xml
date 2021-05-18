@@ -16,4 +16,5 @@
     <string name="this_is_a_very_long_description_about_a_nothing_and_awful_info_of_a_searched_item">This is a very long description about a nothing and awful info of a searched item</string>
     <string name="anaconda">Anaconda</string>
     <string name="title">Title</string>
+    <string name="no_result_found">No result found.</string>
 </resources>

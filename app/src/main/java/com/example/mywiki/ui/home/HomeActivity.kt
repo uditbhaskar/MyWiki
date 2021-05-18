@@ -8,7 +8,6 @@ import android.widget.ArrayAdapter
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mywiki.databinding.ActivityHomeBinding
-import com.example.mywiki.di.RecycleViewHorizontal
 import com.example.mywiki.di.component.ActivityComponent
 import com.example.mywiki.ui.base.BaseActivity
 import com.example.mywiki.ui.home.historyList.HistoryAdapter
@@ -57,6 +56,8 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
 
         binding.searchBar.setAdapter(searchSuggestionAdapter)
 
+        binding.rvSearchResult.visibility = View.GONE
+
         binding.searchBar.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
@@ -82,7 +83,8 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
         }
 
         binding.rvHistory.apply {
-            layoutManager = LinearLayoutManager(this@HomeActivity,LinearLayoutManager.HORIZONTAL,false)
+            layoutManager =
+                LinearLayoutManager(this@HomeActivity, LinearLayoutManager.HORIZONTAL, false)
             adapter = historyAdapter
         }
 
@@ -115,9 +117,10 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
             it.data.run {
                 if (this.isNullOrEmpty()) {
                     binding.rvSearchResult.visibility = View.GONE
+                    binding.tvNoSearch.visibility = View.VISIBLE
                 } else {
                     binding.rvSearchResult.visibility = View.VISIBLE
-
+                    binding.tvNoSearch.visibility = View.VISIBLE
                 }
                 searchListAdapter.appendData(this)
                 searchListAdapter.notifyDataSetChanged()
@@ -130,7 +133,6 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
                 historyAdapter.appendData(this)
             }
         })
-
 
 
     }

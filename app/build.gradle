@@ -132,4 +132,7 @@ dependencies {
     implementation "com.github.mancj:MaterialSearchBar:$search_bar"
 
     implementation "de.hdodenhof:circleimageview:$circular_image"
+
+    //Animation
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 }

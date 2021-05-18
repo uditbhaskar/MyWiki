@@ -69,7 +69,7 @@ class HomeViewModel(
             compositeDisposable.add(
                 searchQueryRepository.fetchSearchSuggestion(q)
                     .subscribeOn(schedulerProvider.io())
-                    .debounce (200,TimeUnit.MILLISECONDS)  //removing unnecessary network calls
+                    .debounce (200,TimeUnit.MILLISECONDS)  //removing unnecessary network calls 
                     .filter {
                         return@filter it.isNotEmpty()           //filtering the search with no result calls
                     }

@@ -82,4 +82,7 @@ ext {
     search_bar = '0.8.5'
 
     circular_image = '3.1.0'
+
+    //Animation
+    lottieVersion = "3.7.0"
 }
