@@ -19,7 +19,7 @@ This project is based on MVVM architecture and has a beautiful UI.
 <img src="https://user-images.githubusercontent.com/39986507/118641939-6178a100-b7f8-11eb-90d1-70e31b669e3f.png" width="290">   <img src="https://user-images.githubusercontent.com/39986507/118423550-dc4f9800-b6e2-11eb-9f2c-4db487ddbd58.png" width="290">
 
 
-## Search list & No result search page..
+## Search list & No result search page.
 <img src="https://user-images.githubusercontent.com/39986507/118423544-d659b700-b6e2-11eb-91e9-de890735f26f.png" width="290">    <img src="https://user-images.githubusercontent.com/39986507/118641933-60477400-b7f8-11eb-8604-2a830b50be7a.png" width="290">                           
 
 ## WebView Screen
