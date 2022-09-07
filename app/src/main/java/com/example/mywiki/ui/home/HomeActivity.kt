@@ -64,7 +64,6 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 viewModel.onSearchingSuggestion(s.toString())
-
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -104,7 +103,6 @@ class HomeActivity : BaseActivity<HomeViewModel>() {
 
     override fun setupObservers() {
         super.setupObservers()
-
 
 
         viewModel.searchFieldSuggestion.observe(this, Observer {
